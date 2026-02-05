@@ -1,0 +1,317 @@
+/* =====================
+   CSS VARIABLES (THEME)
+   ===================== */
+:root {
+  --bg: #020617;
+  --bg-soft: #020617;
+  --card: #020617;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --danger: #f87171;
+  --radius: 14px;
+  --transition: 0.25s ease;
+}
+
+/* =====================
+   RESET
+   ===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at top, var(--bg-soft), var(--bg));
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  transition: background var(--transition), color var(--transition);
+}
+
+/* =====================
+   HEADER
+   ===================== */
+/* HEADER */
+.header {
+  background: var(--bg); /* ten sam kolor co body */
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: background var(--transition), color var(--transition);
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* odległość między inputem, Find i toggle */
+  flex-wrap: wrap; /* dla małych ekranów */
+}
+
+.search {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#theme-toggle {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+#theme-toggle:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+
+.header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+/* =====================
+   SEARCH
+   ===================== */
+
+.search__input {
+  width: min(400px, 70%);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: var(--text);
+  outline: none;
+  transition: border var(--transition), box-shadow var(--transition);
+}
+
+.search__input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.search__button {
+  padding: 0.75rem 1.2rem;
+  border-radius: var(--radius);
+  border: none;
+  background: var(--accent);
+  color: #020617;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.search__button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.35);
+}
+
+/* =====================
+   MAIN
+   ===================== */
+.main {
+  padding: 1.5rem;
+  display: grid;
+  gap: 3rem;
+}
+
+/* =====================
+   SECTIONS
+   ===================== */
+section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: var(--muted);
+}
+
+/* =====================
+   STATES
+   ===================== */
+.state {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  animation: fadeIn 0.4s ease;
+}
+
+.state--error {
+  color: var(--danger);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   CARDS GRID
+   ===================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.2rem;
+}
+
+/* =====================
+   CARD
+   ===================== */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid #1e293b;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+}
+
+/* =====================
+   COVER
+   ===================== */
+.card__cover {
+  height: 220px;
+  background: #020617;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* =====================
+   CONTENT
+   ===================== */
+.card__title {
+  font-weight: 600;
+  padding: 0.75rem 0.75rem 0;
+}
+
+.card__author,
+.card__year {
+  padding: 0 0.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* =====================
+   BUTTON
+   ===================== */
+.card__button {
+  margin: auto 0.75rem 0.75rem;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.card__button:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+@media (max-width: 600px) {
+  .search {
+    flex-direction: column;
+  }
+
+  .search__input {
+    width: 100%;
+  }
+}
+
+
+
+/* =====================
+   SKELETON LOADING
+   ===================== */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    rgba(255,255,255,0.03) 25%,
+    rgba(255,255,255,0.12) 37%,
+    rgba(255,255,255,0.03) 63%
+  );
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.skeleton-cover {
+  height: 220px;
+  background: #020617;
+}
+
+.skeleton-text {
+  height: 12px;
+  margin: 0.5rem 0.75rem;
+  background: #020617;
+  border-radius: 6px;
+}
+
+.skeleton-text.short {
+  width: 60%;
+}
+
+.skeleton-button {
+  height: 32px;
+  margin: 0.75rem;
+  border-radius: var(--radius);
+  background: #020617;
+}
+
+.card.removing {
+  opacity: 0;
+  transform: scale(.95);
+}
+.state--loading {
+  color: #555;
+  font-style: italic;
+}
+
+[data-theme="light"] {
+  --bg: #e2e8f0;
+  --bg-soft: #e2e8f0;
+  --card: #fff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #38bdf8;
+  --danger: #ef4444;
+}
