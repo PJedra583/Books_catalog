@@ -11,7 +11,7 @@ https://pjedra583.github.io/Books_catalog/
 a) Clone the repository: "git clone https://github.com/PJedra583/Books_catalog"  
 b) Install dependencies: "npm install"  
 c) Start the dev server: "npm run dev"  
-d) Open the local URL shown in your browser (usually http://localhost:5173)
+d) Open the local URL shown in your browser 
 
 **Production build:**  
 a) Build the project: "npm run build"  
