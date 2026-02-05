@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Books Catalogue</title>
+</head>
+<body>
+
+  <header class="header">
+  <h1>📚 Books Catalogue</h1>
+
+  <div class="search-wrapper">
+    <div class="search">
+      <input
+        type="text"
+        class="search__input"
+        placeholder="Search by title, author or keyword"
+      />
+      <button type="button" class="search__button">Find</button>
+    </div>
+    <button type="button" id="theme-toggle">Toggle Theme</button>
+  </div>
+</header>
+
+  <main class="main">
+
+    <section class="results">
+      <h2>Results</h2>
+
+      <!-- STATES -->
+      <p class="state state--info">Enter a query to search for books</p>
+      <!-- <p class="state state--loading">Loading...</p> -->
+      <!-- <p class="state state--error">Nothing found</p> -->
+
+      <div class="cards">
+        <!-- Book cards will appear here -->
+      </div>
+    </section>
+
+    <section class="favorites">
+      <h2>Favorites</h2>
+
+      <p class="state state--info">No favorite books yet</p>
+
+      <div class="cards">
+
+	  </div>
+	  
+    </section>
+
+  </main>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
