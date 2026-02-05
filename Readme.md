@@ -2,8 +2,7 @@
 
 ## Task
 This project is a small web application to search for books by title, display results as cards, and manage a favorites list stored in localStorage. Users can also toggle between light and dark themes.  
-
-## Hosted page:
+Hosted page:
 https://pjedra583.github.io/Books_catalog/
 
 ## How to Run the App
