@@ -3,12 +3,13 @@
 ## Task
 This project is a small web application to search for books by title, display results as cards, and manage a favorites list stored in localStorage. Users can also toggle between light and dark themes.  
 
-Full specification can be found in the assignment document.
+## Hosted page:
+https://pjedra583.github.io/Books_catalog/
 
 ## How to Run the App
 
 **Development:**  
-a) Clone the repository: "git clone <repository_url>"  
+a) Clone the repository: "git clone https://github.com/PJedra583/Books_catalog"  
 b) Install dependencies: "npm install"  
 c) Start the dev server: "npm run dev"  
 d) Open the local URL shown in your browser (usually http://localhost:5173)
